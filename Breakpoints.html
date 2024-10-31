@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website(Media Queries)</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            color: white;
+            background-color: rgb(219, 9, 177);
+            width: 100%;
+            max-width: 1024px;
+        }
+        @media (max-width:612px){
+            body{
+                align-items: flex-start;
+            }
+            .container{
+                background-color: red;
+            }
+        }
+        @media (min-width:613px) and (max-width:1024px) {
+            body{          
+                align-items: flex-end;
+            }
+            .container{
+                background-color: blue;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Media Queries</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+        perspiciatis reiciendis molestiae?
+      </p>
+    </div>
+  </body>
+</html>
