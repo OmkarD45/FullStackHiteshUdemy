@@ -25,5 +25,19 @@ console.log(orderTea("Lemon Tea"));
 const calculateTotal=(price,qty)=>{
     return price*qty;
 }
-
 console.log(`Total Price ${calculateTotal(200,5)}`);
+
+// --------------------------------------------------Higher Order
+function processTeaOrder(teaFunction){
+    return teaFunction('earl grey');
+}
+console.log(processTeaOrder(makeTea));
+
+
+function createTeaMaker(){
+    return function (teaType){
+        return `making ${teaType}`;
+    };
+}
+let teaMaker=createTeaMaker();
+console.log(teaMaker("Green Tea"));
